@@ -1,0 +1,21 @@
+type User {
+  id: String!
+  name: String!
+}
+
+
+type Location {
+  x: Int!
+  y: Int!
+  unit: Int!
+}
+
+type Room {
+  code: String!
+  p1: String!
+  p2: String
+  board:[[Location]]
+  isGaming: Boolean!
+  winner: Int!
+  turn: Int!
+}

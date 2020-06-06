@@ -1,0 +1,3 @@
+type Mutation {
+  putUnit(code: String!, x: Int!, y: Int!, userName: String!): Room!
+}

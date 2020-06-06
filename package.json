@@ -1,0 +1,24 @@
+{
+  "name": "othello-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/shortid": "^0.0.29",
+    "apollo-server": "^2.14.1",
+    "graphql": "^15.0.0",
+    "merge-graphql-schemas": "^1.7.8",
+    "shortid": "^2.2.15",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.3"
+  },
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register --files src/index.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^14.0.6",
+    "nodemon": "^2.0.4"
+  }
+}
