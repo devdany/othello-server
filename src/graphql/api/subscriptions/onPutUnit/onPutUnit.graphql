@@ -1,3 +1,0 @@
-type Subscription {
-  onPutUnit(code: String!): Room
-}
