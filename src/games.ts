@@ -23,7 +23,7 @@ type Location = {
 
 // 1, 7 => 1, 0
 // 1, 6 => 2, 0
-const initGameBoard = [
+const initGameBoard = () => [
   [{x: 1, y: 8, unit: 0}, {x: 2, y: 8, unit: 0}, {x: 3, y: 8, unit: 0}, {x: 4, y: 8, unit: 0}, {x: 5, y: 8, unit: 0}, {x: 6, y: 8, unit: 0}, {x: 7, y: 8, unit: 0}, {x: 8, y: 8, unit: 0}],
   [{x: 1, y: 7, unit: 0}, {x: 2, y: 7, unit: 0}, {x: 3, y: 7, unit: 0}, {x: 4, y: 7, unit: 0}, {x: 5, y: 7, unit: 0}, {x: 6, y: 7, unit: 0}, {x: 7, y: 7, unit: 0}, {x: 8, y: 7, unit: 0}],
   [{x: 1, y: 6, unit: 0}, {x: 2, y: 6, unit: 0}, {x: 3, y: 6, unit: 0}, {x: 4, y: 6, unit: 0}, {x: 5, y: 6, unit: 0}, {x: 6, y: 6, unit: 0}, {x: 7, y: 6, unit: 0}, {x: 8, y: 6, unit: 0}],
@@ -38,7 +38,7 @@ export const createGame = (p1: string, code: string) => {
   rooms.push({
     code: code,
     p1: p1,
-    board: initGameBoard,
+    board: initGameBoard(),
     isGaming: false,
     winner: 0,
     turn: 0,
@@ -77,7 +77,7 @@ export const startGame = (code: string) => {
     if (room.code === code) {
       rooms[i].isGaming = true
       rooms[i].turn = 1
-      rooms[i].board = initGameBoard
+      rooms[i].board = initGameBoard()
       rooms[i].p1FailCount = 0
       rooms[i].p2FailCount = 0
       rooms[i].winner = 0
